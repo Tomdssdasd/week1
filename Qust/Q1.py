@@ -1,19 +1,19 @@
-phone=input("请输入有效的手机号")
-list=[151,153,186,139,135]
+phone=input("请输入手机号")
+str=[151,169,186,153,139,187]
 try:
     int(phone)
     if(len(phone)==11):
         head=phone[0:3]
         bool=False
-        for i in list:
-            if(int(head)==(i)):
+        for i in str:
+            if (int(head)==i):
                 bool=True
                 break
         if(bool):
-            print("有效手机号")
+            print("符合")
         else:
-            print("不是有效手机号")
+            print("不符合")
     else:
-        print("不是有效的手机号")
+        print("不是有效的")
 except ValueError:
-    print("不是有效的手机号")
+    print("不会有效的")
